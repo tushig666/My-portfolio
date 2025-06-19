@@ -37,4 +37,4 @@ npm run dev
 
 ---
 
-© 2025 John Doe
+© 2025 Tushig
