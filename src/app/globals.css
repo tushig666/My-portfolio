@@ -34,6 +34,7 @@
   body {
     @apply bg-background text-foreground selection:bg-primary selection:text-primary-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+    overflow-x: hidden;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-headline tracking-tight;
@@ -41,9 +42,9 @@
 }
 
 .glass {
-  background: rgba(11, 17, 32, 0.7);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(11, 17, 32, 0.4);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .neon-glow {
@@ -58,7 +59,7 @@
   background-image: 
     linear-gradient(rgba(0, 5, 255, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 5, 255, 0.05) 1px, transparent 1px);
-  background-size: 50px 50px;
+  background-size: 60px 60px;
 }
 
 ::-webkit-scrollbar {
@@ -88,4 +89,23 @@
 
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translate(0, 0); }
+  33% { transform: translate(2%, 4%); }
+  66% { transform: translate(-3%, -2%); }
+}
+
+.animate-float-slow {
+  animation: float-slow 20s ease-in-out infinite;
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 8s ease-in-out infinite;
 }

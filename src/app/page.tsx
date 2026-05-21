@@ -9,11 +9,15 @@ import { Projects } from "@/components/sections/projects"
 import { Experience } from "@/components/sections/experience"
 import { AIVision } from "@/components/sections/ai-vision"
 import { Contact } from "@/components/sections/contact"
+import { AtmosphericBackground } from "@/components/ui/atmospheric-background"
 
 export default function Home() {
   return (
-    <main className="relative bg-background min-h-screen">
-      <div className="relative">
+    <main className="relative bg-transparent min-h-screen">
+      {/* Advanced Cinematic Lighting System */}
+      <AtmosphericBackground />
+      
+      <div className="relative z-10">
         <Navbar />
         <Hero />
         <About />
@@ -23,10 +27,6 @@ export default function Home() {
         <AIVision />
         <Contact />
       </div>
-
-      {/* Persistent global background noise/texture */}
-      <div className="fixed inset-0 pointer-events-none z-[1] opacity-[0.03] contrast-150 brightness-150" 
-           style={{ backgroundImage: 'url("https://grainy-gradients.vercel.app/noise.svg")' }} />
     </main>
   )
 }
