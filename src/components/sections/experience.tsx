@@ -58,7 +58,7 @@ export function Experience() {
                 viewport={{ once: true, margin: "-100px" }}
               >
                 {/* Connector Node */}
-                <div className="absolute left-8 md:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-background border-2 border-secondary z-10 flex items-center justify-center shadow-[0_0_15px_rgba(51,255,204,0.5)]">
+                <div className="absolute left-8 md:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-background border-2 border-secondary z-10 flex items-center justify-center shadow-[0_0_15px_rgba(89,0,255,0.5)]">
                   <div className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
                 </div>
 
