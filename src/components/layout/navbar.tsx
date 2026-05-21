@@ -46,12 +46,10 @@ export function Navbar() {
           <button 
             onClick={toggleLanguage}
             className="flex items-center gap-2 glass px-3 py-1.5 rounded-full border-white/5 hover:border-primary/50 transition-all group"
+            aria-label="Toggle Language"
           >
-            <span className="text-lg leading-none">
+            <span className="text-xl leading-none">
               {language === 'en' ? '🇺🇸' : '🇯🇵'}
-            </span>
-            <span className="text-[10px] font-bold tracking-widest text-white/50 group-hover:text-primary transition-colors">
-              {language === 'en' ? 'EN' : 'JA'}
             </span>
           </button>
         </div>
