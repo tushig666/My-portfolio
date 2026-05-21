@@ -7,24 +7,18 @@ import { Mail, Github, Instagram, ArrowUpRight } from "lucide-react"
 const contacts = [
   {
     name: "GITHUB",
-    value: "@tushig666",
     link: "https://github.com/tushig666",
     icon: <Github size={24} />,
-    color: "primary"
   },
   {
     name: "INSTAGRAM",
-    value: "@tse.tushig",
     link: "https://www.instagram.com/tse.tushig/",
     icon: <Instagram size={24} />,
-    color: "accent"
   },
   {
     name: "GMAIL",
-    value: "tsetushig@gmail.com",
     link: "mailto:tsetushig@gmail.com",
     icon: <Mail size={24} />,
-    color: "primary"
   }
 ]
 
@@ -58,7 +52,6 @@ export function Contact() {
                 </div>
                 <div>
                   <div className="text-xs font-bold text-foreground/40 uppercase tracking-widest mb-1">{contact.name}</div>
-                  <div className="text-lg font-bold text-white group-hover:text-primary transition-colors">{contact.value}</div>
                 </div>
                 <ArrowUpRight className="absolute top-6 right-6 opacity-0 group-hover:opacity-40 transition-opacity" size={20} />
               </div>
