@@ -45,9 +45,9 @@ export function Hero() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-              className="text-6xl md:text-[8rem] lg:text-[10rem] font-headline font-bold leading-[0.9] mb-6 tracking-tighter"
+              className="text-4xl md:text-7xl lg:text-8xl font-headline font-bold leading-tight mb-6 tracking-tighter whitespace-nowrap"
             >
-              <span className="text-primary neon-text">TSE</span><br />
+              <span className="text-primary neon-text">TSE</span>{" "}
               <span className="text-white">TUSHIG</span>
             </motion.h1>
 
@@ -83,7 +83,7 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.5, x: 50 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            className="relative w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 group flex-shrink-0"
+            className="relative w-32 h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 group flex-shrink-0"
           >
             {/* Pulsing Aura */}
             <div className="absolute inset-[-6px] rounded-full bg-primary/30 blur-md group-hover:bg-primary/50 transition-all animate-pulse" />
