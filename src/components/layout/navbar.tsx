@@ -2,20 +2,22 @@
 
 import React, { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Menu, X, Github, Mail } from "lucide-react"
+import { Menu, X, Github, Globe } from "lucide-react"
 import { cn } from "@/lib/utils"
-
-const navItems = [
-  { name: "Identity", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Vision", href: "#vision" },
-  { name: "Contact", href: "#contact" },
-]
+import { useLanguage } from "@/components/providers/language-provider"
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const { language, setLanguage, t } = useLanguage()
+
+  const navItems = [
+    { name: t.nav.identity, href: "#about" },
+    { name: t.nav.skills, href: "#skills" },
+    { name: t.nav.projects, href: "#projects" },
+    { name: t.nav.vision, href: "#vision" },
+    { name: t.nav.contact, href: "#contact" },
+  ]
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +26,10 @@ export function Navbar() {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
+
+  const toggleLanguage = () => {
+    setLanguage(language === 'en' ? 'ja' : 'en')
+  }
 
   return (
     <motion.header
@@ -36,8 +42,18 @@ export function Navbar() {
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <div className="flex-1">
-          {/* Logo removed as requested */}
+        <div className="flex-1 flex items-center gap-4">
+          <button 
+            onClick={toggleLanguage}
+            className="flex items-center gap-2 glass px-3 py-1.5 rounded-full border-white/5 hover:border-primary/50 transition-all group"
+          >
+            <span className="text-lg leading-none">
+              {language === 'en' ? '🇺🇸' : '🇯🇵'}
+            </span>
+            <span className="text-[10px] font-bold tracking-widest text-white/50 group-hover:text-primary transition-colors">
+              {language === 'en' ? 'EN' : 'JA'}
+            </span>
+          </button>
         </div>
 
         {/* Desktop Nav */}
@@ -64,7 +80,7 @@ export function Navbar() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            HIRE ME
+            {t.nav.hire}
           </motion.a>
           
           <button 
@@ -96,6 +112,15 @@ export function Navbar() {
                   {item.name}
                 </a>
               ))}
+              <button 
+                onClick={() => {
+                  toggleLanguage();
+                  setMobileMenuOpen(false);
+                }}
+                className="flex items-center gap-2 mt-4 text-primary font-bold"
+              >
+                {language === 'en' ? '🇯🇵 SWITCH TO JAPANESE' : '🇺🇸 SWITCH TO ENGLISH'}
+              </button>
             </div>
           </motion.div>
         )}

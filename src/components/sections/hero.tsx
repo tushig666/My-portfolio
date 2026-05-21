@@ -1,17 +1,18 @@
-
 "use client"
 
-import React, { useEffect, useRef } from "react"
+import React, { useRef } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { ArrowRight, Github, Mail, ChevronDown } from "lucide-react"
 import Image from "next/image"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
+import { useLanguage } from "@/components/providers/language-provider"
 
 export function Hero() {
   const containerRef = useRef<HTMLDivElement>(null)
   const { scrollY } = useScroll()
   const y1 = useTransform(scrollY, [0, 500], [0, 150])
   const opacity = useTransform(scrollY, [0, 300], [1, 0])
+  const { t } = useLanguage()
   
   const profileImage = PlaceHolderImages.find(img => img.id === 'profile')?.imageUrl || ""
 
@@ -24,23 +25,23 @@ export function Hero() {
       </div>
 
       <div className="container relative z-10 px-6 mx-auto">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 text-center lg:text-left">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-12">
           
-          <div className="flex-1">
+          <div className="text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase mb-6"
+              className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase mb-6 mx-auto"
             >
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
               </span>
-              SYSTEM STATUS: ONLINE
+              {t.hero.status}
             </motion.div>
 
-            <div className="flex flex-col lg:flex-row items-center gap-8 mb-6">
+            <div className="flex flex-col lg:flex-row items-center justify-center gap-8 mb-6">
               <motion.h1
                 style={{ y: y1 }}
                 initial={{ opacity: 0, y: 50 }}
@@ -58,13 +59,8 @@ export function Hero() {
                 transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
                 className="relative w-24 h-24 md:w-32 md:h-32 group flex-shrink-0"
               >
-                {/* Pulsing Aura */}
                 <div className="absolute inset-[-6px] rounded-full bg-primary/30 blur-md group-hover:bg-primary/50 transition-all animate-pulse" />
-                
-                {/* Outer Ring */}
                 <div className="absolute inset-0 rounded-full border-2 border-primary/50 shadow-[0_0_20px_rgba(0,5,255,0.5)] z-10" />
-                
-                {/* Image Container */}
                 <div className="relative w-full h-full rounded-full overflow-hidden border border-white/10 glass p-1.5">
                   <Image
                     src={profileImage}
@@ -81,33 +77,32 @@ export function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.5 }}
-              className="text-lg md:text-xl lg:text-2xl text-foreground/60 max-w-2xl font-medium tracking-wide mb-12 font-headline"
+              className="text-lg md:text-xl lg:text-2xl text-foreground/60 max-w-2xl font-medium tracking-wide mb-12 font-headline mx-auto"
             >
-              FRONTEND ARCHITECT & <span className="text-secondary">AI BUILDER</span>
+              {t.hero.role}
             </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
-              className="flex flex-wrap justify-center lg:justify-start gap-6"
+              className="flex flex-wrap justify-center gap-6"
             >
               <a href="#projects" className="group relative px-8 py-4 bg-primary text-background font-bold rounded-lg overflow-hidden transition-all hover:scale-105 active:scale-95 neon-glow">
                 <span className="relative z-10 flex items-center gap-2">
-                  VIEW PROJECTS <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+                  {t.hero.view} <ArrowRight className="group-hover:translate-x-1 transition-transform" />
                 </span>
                 <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity" />
               </a>
               
               <a href="#contact" className="group relative px-8 py-4 border border-white/10 hover:border-primary/50 text-foreground font-bold rounded-lg overflow-hidden transition-all hover:scale-105 active:scale-95 glass">
-                CONTACT ME
+                {t.hero.contact}
               </a>
             </motion.div>
           </div>
         </div>
       </div>
 
-      {/* Sidebar Socials */}
       <motion.div 
         className="fixed left-8 bottom-12 hidden lg:flex flex-col gap-6 z-40"
         initial={{ opacity: 0, x: -50 }}
@@ -119,7 +114,6 @@ export function Hero() {
         <a href="mailto:tsetushig@gmail.com" className="hover:text-primary transition-all hover:-translate-y-1"><Mail size={20} /></a>
       </motion.div>
 
-      {/* Scroll Indicator */}
       <motion.div 
         style={{ opacity }}
         animate={{ y: [0, 10, 0] }}
@@ -127,7 +121,7 @@ export function Hero() {
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-foreground/30 cursor-pointer"
         onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
       >
-        <span className="text-[10px] tracking-[0.3em] font-bold uppercase">Initialize Scroll</span>
+        <span className="text-[10px] tracking-[0.3em] font-bold uppercase">{t.hero.scroll}</span>
         <ChevronDown size={20} />
       </motion.div>
     </section>

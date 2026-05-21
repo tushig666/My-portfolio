@@ -1,11 +1,13 @@
-
 "use client"
 
 import React from "react"
 import { motion } from "framer-motion"
-import { ChevronUp, Github, Twitter, Linkedin, Instagram } from "lucide-react"
+import { ChevronUp } from "lucide-react"
+import { useLanguage } from "@/components/providers/language-provider"
 
 export function Footer() {
+  const { t } = useLanguage()
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
@@ -16,7 +18,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex flex-col gap-2">
             <div className="text-2xl font-headline font-bold text-primary neon-text tracking-tighter">NEOPULSE</div>
-            <div className="text-xs font-code text-foreground/40 tracking-[0.3em] uppercase">© 2024 DESIGNED BY TUSHIG TSE</div>
+            <div className="text-xs font-code text-foreground/40 tracking-[0.3em] uppercase">{t.footer.design}</div>
           </div>
 
           <div className="flex gap-8">
@@ -36,12 +38,12 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="text-[10px] font-code text-foreground/20 flex gap-4">
-            <span>CORE: v2.5.0-STABLE</span>
-            <span>UPTIME: 99.99%</span>
-            <span>LATENCY: 14ms</span>
+            <span>{t.footer.core}</span>
+            <span>{t.footer.uptime}</span>
+            <span>{t.footer.latency}</span>
           </div>
           <div className="text-[10px] font-code text-foreground/20">
-            LAST_REPLICATED: {new Date().toLocaleDateString()}
+            {t.footer.replicated}: {new Date().toLocaleDateString()}
           </div>
         </div>
       </div>

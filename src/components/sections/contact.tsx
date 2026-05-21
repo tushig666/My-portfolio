@@ -3,6 +3,7 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { Mail, Github, Instagram, ArrowUpRight } from "lucide-react"
+import { useLanguage } from "@/components/providers/language-provider"
 
 const contacts = [
   {
@@ -23,13 +24,19 @@ const contacts = [
 ]
 
 export function Contact() {
+  const { t } = useLanguage()
+
   return (
     <section id="contact" className="py-24 relative overflow-hidden">
       <div className="container px-6 mx-auto">
         <div className="text-center mb-16">
-          <div className="text-primary font-bold tracking-widest text-sm mb-4 uppercase">TRANSMISSION</div>
+          <div className="text-primary font-bold tracking-widest text-sm mb-4 uppercase">{t.contact.sub}</div>
           <h2 className="text-4xl md:text-7xl font-bold font-headline">
-            GET IN <span className="text-primary neon-text">TOUCH.</span>
+            {t.language === 'en' ? (
+              <>GET IN <span className="text-primary neon-text">TOUCH.</span></>
+            ) : (
+              <><span className="text-primary neon-text">お問い合わせ。</span></>
+            )}
           </h2>
         </div>
 

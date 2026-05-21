@@ -3,8 +3,11 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { Code2, Terminal, Cpu, Sparkles } from "lucide-react"
+import { useLanguage } from "@/components/providers/language-provider"
 
 export function About() {
+  const { t } = useLanguage()
+
   return (
     <section id="about" className="py-24 relative overflow-hidden">
       <div className="container px-6 mx-auto">
@@ -17,26 +20,22 @@ export function About() {
             transition={{ duration: 0.8 }}
           >
             <div className="flex items-center gap-3 text-primary font-bold tracking-widest text-sm mb-6 uppercase">
-              <Terminal size={18} /> IDENTIFY_USER
+              <Terminal size={18} /> {t.about.sub}
             </div>
             <h2 className="text-4xl md:text-6xl font-bold font-headline mb-8">
-              A CREATIVE ENGINEER AT THE <span className="text-primary neon-text">EDGE OF REALITY.</span>
+              {t.about.title}
             </h2>
             <div className="space-y-6 text-foreground/70 text-lg">
-              <p>
-                I am <span className="text-white font-bold">Tushig Tse</span>, a visionary Frontend Architect dedicated to crafting immersive digital ecosystems that blend cinematic aesthetics with bleeding-edge technology.
-              </p>
-              <p>
-                My work exists at the intersection of <span className="text-secondary">Generative AI</span> and <span className="text-secondary">High-Frequency UI</span>. I build interfaces that don't just display data—they respond, breathe, and evolve.
-              </p>
+              <p>{t.about.desc1}</p>
+              <p>{t.about.desc2}</p>
             </div>
 
             <div className="grid grid-cols-2 gap-6 mt-12">
               {[
-                { icon: <Cpu />, title: "AI Builder", desc: "OpenAI & LLM Integration" },
-                { icon: <Code2 />, title: "UI Architect", desc: "Next.js & Performance" },
-                { icon: <Sparkles />, title: "Experience Designer", desc: "Cinematic Animations" },
-                { icon: <Terminal />, title: "System Thinker", desc: "Clean & Scalable Code" }
+                { icon: <Cpu />, title: t.about.ai, desc: t.about.aiDesc },
+                { icon: <Code2 />, title: t.about.ui, desc: t.about.uiDesc },
+                { icon: <Sparkles />, title: t.about.exp, desc: t.about.expDesc },
+                { icon: <Terminal />, title: t.about.sys, desc: t.about.sysDesc }
               ].map((item, i) => (
                 <motion.div 
                   key={i}
@@ -66,23 +65,23 @@ export function About() {
                   <div className="w-3 h-3 rounded-full bg-yellow-500/50" />
                   <div className="w-3 h-3 rounded-full bg-green-500/50" />
                 </div>
-                <div className="text-[10px] font-code text-white/30 uppercase tracking-widest">tushig_tse --vision</div>
+                <div className="text-[10px] font-code text-white/30 uppercase tracking-widest">{t.about.terminal}</div>
               </div>
               <div className="p-8 font-code text-sm sm:text-base space-y-4">
                 <div className="flex gap-3">
                   <span className="text-primary">{'>'}</span>
-                  <span className="text-white">init --profile</span>
+                  <span className="text-white">{t.about.init}</span>
                 </div>
                 <div className="text-secondary/80 ml-6">
                   {`{`}
                   <br />
-                  &nbsp;&nbsp;name: "Tushig Tse",
+                  &nbsp;&nbsp;name: "{t.about.profile.name}",
                   <br />
-                  &nbsp;&nbsp;status: "Building the Future",
+                  &nbsp;&nbsp;status: "{t.about.profile.status}",
                   <br />
-                  &nbsp;&nbsp;location: "Deep Web / Meta",
+                  &nbsp;&nbsp;location: "{t.about.profile.location}",
                   <br />
-                  &nbsp;&nbsp;focus: ["Next.js", "AI", "Immersive UI"]
+                  &nbsp;&nbsp;focus: [{t.about.profile.focus.map(f => `"${f}"`).join(", ")}]
                   <br />
                   {`}`}
                 </div>

@@ -1,4 +1,3 @@
-
 "use client"
 
 import React from "react"
@@ -17,6 +16,7 @@ import {
   Share2, 
   Cloud 
 } from "lucide-react"
+import { useLanguage } from "@/components/providers/language-provider"
 
 const skills = [
   { name: "React", label: "Frontend", icon: <Layers size={18} /> },
@@ -34,6 +34,8 @@ const skills = [
 ]
 
 export function Skills() {
+  const { t } = useLanguage()
+
   return (
     <section id="skills" className="py-24 relative">
       <div className="container px-6 mx-auto">
@@ -44,7 +46,7 @@ export function Skills() {
             viewport={{ once: true }}
             className="text-primary font-bold tracking-[0.3em] text-sm mb-4 uppercase"
           >
-            SYSTEM_CAPABILITIES
+            {t.skills.sub}
           </motion.div>
           <motion.h2 
             className="text-4xl md:text-6xl font-headline font-bold mb-6"
@@ -52,7 +54,7 @@ export function Skills() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            TECH <span className="text-primary neon-text">ARSENAL.</span>
+            {t.skills.title}
           </motion.h2>
         </div>
 
@@ -66,19 +68,18 @@ export function Skills() {
               transition={{ delay: idx * 0.05 }}
               className="group"
             >
-              <div className="relative p-4 rounded-xl glass border-white/5 hover:border-primary/30 transition-all flex flex-col items-start gap-3 h-full">
-                <div className="p-2 rounded-lg bg-white/5 border border-white/10 text-primary group-hover:scale-110 transition-transform">
+              <div className="relative p-3 rounded-xl glass border-white/5 hover:border-primary/30 transition-all flex flex-col items-start gap-2 h-full">
+                <div className="p-1.5 rounded-lg bg-white/5 border border-white/10 text-primary group-hover:scale-110 transition-transform">
                   {skill.icon}
                 </div>
                 
                 <div>
-                  <div className="text-[9px] font-bold text-primary tracking-widest uppercase mb-1 opacity-70 group-hover:opacity-100 transition-opacity">
+                  <div className="text-[8px] font-bold text-primary tracking-widest uppercase mb-1 opacity-70 group-hover:opacity-100 transition-opacity">
                     {skill.label}
                   </div>
-                  <h3 className="text-sm font-bold text-white font-headline tracking-tight">{skill.name}</h3>
+                  <h3 className="text-xs font-bold text-white font-headline tracking-tight">{skill.name}</h3>
                 </div>
 
-                {/* Decorative scanning line */}
                 <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-xl opacity-0 group-hover:opacity-100 transition-opacity">
                   <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-primary/50 to-transparent animate-scanline" />
                 </div>
