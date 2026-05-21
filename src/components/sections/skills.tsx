@@ -2,29 +2,35 @@
 
 import React from "react"
 import { motion } from "framer-motion"
-import { Cpu, Zap, Layers, Globe, Database, Smartphone } from "lucide-react"
+import { 
+  Cpu, 
+  Zap, 
+  Layers, 
+  Globe, 
+  Database, 
+  Code2, 
+  Terminal, 
+  Palette, 
+  BrainCircuit, 
+  Server, 
+  GitBranch, 
+  Share2, 
+  Cloud 
+} from "lucide-react"
 
-const skillCategories = [
-  {
-    title: "Core Stack",
-    icon: <Layers className="text-primary" />,
-    skills: ["React", "Next.js", "TypeScript", "Node.js"]
-  },
-  {
-    title: "AI & Intelligence",
-    icon: <Cpu className="text-secondary" />,
-    skills: ["OpenAI APIs", "Generative AI", "Python", "Automation"]
-  },
-  {
-    title: "Experience",
-    icon: <Zap className="text-primary" />,
-    skills: ["Framer Motion", "GSAP", "Three.js", "TailwindCSS"]
-  },
-  {
-    title: "Architecture",
-    icon: <Globe className="text-secondary" />,
-    skills: ["PostgreSQL", "REST APIs", "Git/GitHub", "Scalability"]
-  }
+const skills = [
+  { name: "React", label: "Frontend", icon: <Layers size={20} /> },
+  { name: "Next.js", label: "Framework", icon: <Globe size={20} /> },
+  { name: "TypeScript", label: "Language", icon: <Code2 size={20} /> },
+  { name: "Python", label: "Backend/AI", icon: <Terminal size={20} /> },
+  { name: "TailwindCSS", label: "Design", icon: <Palette size={20} /> },
+  { name: "PostgreSQL", label: "Database", icon: <Database size={20} /> },
+  { name: "OpenAI API", label: "AI", icon: <BrainCircuit size={20} /> },
+  { name: "Node.js", label: "Backend", icon: <Server size={20} /> },
+  { name: "Framer Motion", label: "Animation", icon: <Zap size={20} /> },
+  { name: "Git", label: "Tooling", icon: <GitBranch size={20} /> },
+  { name: "REST APIs", label: "Integration", icon: <Share2 size={20} /> },
+  { name: "Cloud Native", label: "DevOps", icon: <Cloud size={20} /> }
 ]
 
 export function Skills() {
@@ -32,55 +38,48 @@ export function Skills() {
     <section id="skills" className="py-24 relative">
       <div className="container px-6 mx-auto">
         <div className="text-center mb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-primary font-bold tracking-[0.3em] text-sm mb-4 uppercase"
+          >
+            SYSTEM_CAPABILITIES
+          </motion.div>
           <motion.h2 
             className="text-4xl md:text-7xl font-headline font-bold mb-6"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            TECH <span className="text-primary neon-text">ARSENAL</span>
+            TECH <span className="text-primary neon-text">ARSENAL.</span>
           </motion.h2>
-          <motion.div 
-            className="w-24 h-1 bg-primary mx-auto rounded-full shadow-[0_0_10px_#00DAFF]"
-            initial={{ width: 0 }}
-            whileInView={{ width: 96 }}
-            viewport={{ once: true }}
-          />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {skillCategories.map((category, idx) => (
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+          {skills.map((skill, idx) => (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
+              transition={{ delay: idx * 0.05 }}
               className="group"
             >
-              <div className="relative p-8 rounded-2xl glass border-white/5 hover:border-primary/30 transition-all h-full">
-                <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-100 transition-opacity">
-                  {React.cloneElement(category.icon as React.ReactElement, { size: 48 })}
+              <div className="relative p-6 rounded-xl glass border-white/5 hover:border-primary/30 transition-all flex flex-col items-start gap-4 h-full">
+                <div className="p-3 rounded-lg bg-white/5 border border-white/10 text-primary group-hover:scale-110 transition-transform">
+                  {skill.icon}
                 </div>
                 
-                <div className="flex items-center gap-3 mb-8">
-                  <div className="p-3 rounded-xl bg-white/5 border border-white/10">
-                    {category.icon}
+                <div>
+                  <div className="text-[10px] font-bold text-primary tracking-widest uppercase mb-1 opacity-70 group-hover:opacity-100 transition-opacity">
+                    {skill.label}
                   </div>
-                  <h3 className="text-xl font-bold text-white font-headline">{category.title}</h3>
+                  <h3 className="text-lg font-bold text-white font-headline tracking-tight">{skill.name}</h3>
                 </div>
 
-                <ul className="space-y-4">
-                  {category.skills.map((skill, i) => (
-                    <li key={i} className="flex items-center gap-3 text-foreground/60 group-hover:text-foreground transition-colors">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_5px_#00DAFF]" />
-                      <span className="font-medium">{skill}</span>
-                    </li>
-                  ))}
-                </ul>
-
                 {/* Decorative scanning line */}
-                <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-xl opacity-0 group-hover:opacity-100 transition-opacity">
                   <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-primary/50 to-transparent animate-scanline" />
                 </div>
               </div>
