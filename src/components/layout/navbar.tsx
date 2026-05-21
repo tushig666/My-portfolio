@@ -2,11 +2,10 @@
 
 import React, { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Menu, X, Github, Instagram, Mail } from "lucide-react"
+import { Menu, X, Github, Mail } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const navItems = [
-  { name: "Home", href: "#home" },
   { name: "Identity", href: "#about" },
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
@@ -37,13 +36,9 @@ export function Navbar() {
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <motion.div 
-          className="text-2xl font-headline font-bold text-primary flex items-center gap-2 group cursor-pointer"
-          whileHover={{ scale: 1.05 }}
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        >
-          <div className="w-8 h-8 rounded border-2 border-primary flex items-center justify-center font-bold text-xs group-hover:bg-primary group-hover:text-background transition-colors">TT</div>
-        </motion.div>
+        <div className="flex-1">
+          {/* Logo removed as requested */}
+        </div>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
@@ -59,10 +54,9 @@ export function Navbar() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-4">
+        <div className="flex-1 flex items-center justify-end gap-4">
           <div className="hidden sm:flex items-center gap-4 border-r border-white/10 pr-4 mr-2">
             <a href="https://github.com/tushig666" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors"><Github size={18} /></a>
-            <a href="https://www.instagram.com/tse.tushig/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors"><Instagram size={18} /></a>
           </div>
           <motion.a
             href="#contact"
