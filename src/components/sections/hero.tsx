@@ -58,7 +58,7 @@ export function Hero() {
                 initial={{ opacity: 0, scale: 0.5, x: 50 }}
                 animate={{ opacity: 1, scale: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-                className="relative w-12 h-12 md:w-20 md:h-20 lg:w-24 lg:h-24 group flex-shrink-0"
+                className="relative w-16 h-16 md:w-28 md:h-28 lg:w-32 lg:h-32 group flex-shrink-0"
               >
                 <div className="absolute inset-[-4px] rounded-full bg-primary/30 blur-md group-hover:bg-primary/50 transition-all animate-pulse" />
                 <div className="absolute inset-0 rounded-full border-2 border-primary/50 shadow-[0_0_20px_rgba(0,5,255,0.5)] z-10" />
