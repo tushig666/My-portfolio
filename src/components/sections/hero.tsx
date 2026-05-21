@@ -61,7 +61,7 @@ export function Hero() {
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="text-6xl md:text-8xl lg:text-[10rem] font-headline font-bold leading-tight mb-4 tracking-tighter"
           >
-            TSE <span className="text-primary neon-text">TUSHIG</span>
+            <span className="text-primary neon-text">TSE</span> TUSHIG
           </motion.h1>
 
           <motion.p
