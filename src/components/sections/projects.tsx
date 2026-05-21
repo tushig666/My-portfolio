@@ -2,7 +2,7 @@
 
 import React from "react"
 import { motion } from "framer-motion"
-import { ExternalLink, Github, ArrowUpRight } from "lucide-react"
+import { ExternalLink, Github, ArrowUpRight, ArrowRight } from "lucide-react"
 import Image from "next/image"
 
 const projects = [
