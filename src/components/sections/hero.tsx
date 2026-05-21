@@ -1,3 +1,4 @@
+
 "use client"
 
 import React, { useRef } from "react"
@@ -49,15 +50,15 @@ export function Hero() {
                 transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
                 className="text-5xl md:text-8xl lg:text-9xl font-headline font-bold leading-tight tracking-tighter whitespace-nowrap"
               >
-                <span className="text-primary neon-text">TSE</span>{" "}
-                <span className="text-white">TUSHIG</span>
+                <span className="text-primary neon-text uppercase">TSE</span>{" "}
+                <span className="text-white uppercase">TUSHIG</span>
               </motion.h1>
 
               <motion.div
                 initial={{ opacity: 0, scale: 0.5, x: 50 }}
                 animate={{ opacity: 1, scale: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-                className="relative w-24 h-24 md:w-32 md:h-32 group flex-shrink-0"
+                className="relative w-20 h-20 md:w-28 md:h-28 group flex-shrink-0"
               >
                 <div className="absolute inset-[-6px] rounded-full bg-primary/30 blur-md group-hover:bg-primary/50 transition-all animate-pulse" />
                 <div className="absolute inset-0 rounded-full border-2 border-primary/50 shadow-[0_0_20px_rgba(0,5,255,0.5)] z-10" />
@@ -77,7 +78,7 @@ export function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.5 }}
-              className="text-lg md:text-xl lg:text-2xl text-foreground/60 max-w-2xl font-medium tracking-wide mb-12 font-headline mx-auto"
+              className="text-lg md:text-xl lg:text-2xl text-foreground/60 max-w-2xl font-medium tracking-wide mb-12 font-headline mx-auto uppercase"
             >
               {t.hero.role}
             </motion.p>
@@ -118,11 +119,11 @@ export function Hero() {
         style={{ opacity }}
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-foreground/30 cursor-pointer"
+        className="absolute bottom-20 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 text-foreground/60 cursor-pointer z-20 group"
         onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
       >
-        <span className="text-[10px] tracking-[0.3em] font-bold uppercase">{t.hero.scroll}</span>
-        <ChevronDown size={20} />
+        <span className="text-[10px] tracking-[0.4em] font-bold uppercase transition-colors group-hover:text-primary">{t.hero.scroll}</span>
+        <ChevronDown size={24} className="text-primary animate-pulse-glow" />
       </motion.div>
     </section>
   )
