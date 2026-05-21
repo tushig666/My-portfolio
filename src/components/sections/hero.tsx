@@ -1,8 +1,9 @@
+
 "use client"
 
 import React, { useEffect, useRef } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
-import { ArrowRight, Github, Instagram, Mail, ChevronDown } from "lucide-react"
+import { ArrowRight, Github, Mail, ChevronDown } from "lucide-react"
 import Image from "next/image"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 
@@ -43,22 +44,75 @@ export function Hero() {
       </div>
 
       <div className="container relative z-10 px-6 mx-auto">
-        <div className="flex flex-col items-center text-center">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:text-left text-center">
           
+          <div className="flex-1">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase mb-6"
+            >
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+              </span>
+              SYSTEM STATUS: ONLINE
+            </motion.div>
+
+            <motion.h1
+              style={{ y: y1 }}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+              className="text-7xl md:text-[10rem] lg:text-[12rem] font-headline font-bold leading-[0.9] mb-6 tracking-tighter"
+            >
+              <span className="text-primary neon-text">TSE</span><br />
+              <span className="text-white">TUSHIG</span>
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.5 }}
+              className="text-xl md:text-3xl lg:text-4xl text-foreground/60 max-w-2xl font-medium tracking-wide mb-12 font-headline"
+            >
+              FRONTEND ARCHITECT & <span className="text-secondary">AI BUILDER</span>
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className="flex flex-wrap lg:justify-start justify-center gap-6"
+            >
+              <a href="#projects" className="group relative px-8 py-4 bg-primary text-background font-bold rounded-lg overflow-hidden transition-all hover:scale-105 active:scale-95 neon-glow">
+                <span className="relative z-10 flex items-center gap-2">
+                  VIEW PROJECTS <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+                </span>
+                <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity" />
+              </a>
+              
+              <a href="#contact" className="group relative px-8 py-4 border border-white/10 hover:border-primary/50 text-foreground font-bold rounded-lg overflow-hidden transition-all hover:scale-105 active:scale-95 glass">
+                CONTACT ME
+              </a>
+            </motion.div>
+          </div>
+
           <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-            className="relative w-32 h-32 md:w-40 md:h-40 mb-8 group"
+            initial={{ opacity: 0, scale: 0.5, x: 50 }}
+            animate={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+            className="relative w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 group flex-shrink-0"
           >
             {/* Pulsing Aura */}
-            <div className="absolute inset-[-4px] rounded-full bg-primary/30 blur-md group-hover:bg-primary/50 transition-all animate-pulse" />
+            <div className="absolute inset-[-6px] rounded-full bg-primary/30 blur-md group-hover:bg-primary/50 transition-all animate-pulse" />
             
             {/* Outer Ring */}
-            <div className="absolute inset-0 rounded-full border-2 border-primary/50 shadow-[0_0_15px_rgba(0,5,255,0.5)] z-10" />
+            <div className="absolute inset-0 rounded-full border-2 border-primary/50 shadow-[0_0_20px_rgba(0,5,255,0.5)] z-10" />
             
             {/* Image Container */}
-            <div className="relative w-full h-full rounded-full overflow-hidden border border-white/10 glass p-1">
+            <div className="relative w-full h-full rounded-full overflow-hidden border border-white/10 glass p-1.5">
               <Image
                 src={profileImage}
                 alt="Tushig Tse"
@@ -69,55 +123,6 @@ export function Hero() {
             </div>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase mb-6"
-          >
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-            </span>
-            SYSTEM STATUS: ONLINE
-          </motion.div>
-
-          <motion.h1
-            style={{ y: y1 }}
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-            className="text-6xl md:text-8xl lg:text-[10rem] font-headline font-bold leading-tight mb-4 tracking-tighter"
-          >
-            <span className="text-primary neon-text">TSE</span> TUSHIG
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
-            className="text-lg md:text-2xl text-foreground/60 max-w-2xl font-medium tracking-wide mb-12 font-headline"
-          >
-            FRONTEND ARCHITECT & <span className="text-secondary">AI BUILDER</span>
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-wrap justify-center gap-6"
-          >
-            <a href="#projects" className="group relative px-8 py-4 bg-primary text-background font-bold rounded-lg overflow-hidden transition-all hover:scale-105 active:scale-95 neon-glow">
-              <span className="relative z-10 flex items-center gap-2">
-                VIEW PROJECTS <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-              </span>
-              <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity" />
-            </a>
-            
-            <a href="#contact" className="group relative px-8 py-4 border border-white/10 hover:border-primary/50 text-foreground font-bold rounded-lg overflow-hidden transition-all hover:scale-105 active:scale-95 glass">
-              CONTACT ME
-            </a>
-          </motion.div>
         </div>
       </div>
 
