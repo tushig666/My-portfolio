@@ -1,4 +1,3 @@
-
 "use client"
 
 import React, { useRef } from "react"
@@ -119,7 +118,7 @@ export function Hero() {
         style={{ opacity }}
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
-        className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 text-foreground/60 cursor-pointer z-20 group"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 text-foreground/60 cursor-pointer z-20 group"
         onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
       >
         <span className="text-[10px] tracking-[0.4em] font-bold uppercase transition-colors group-hover:text-primary">{t.hero.scroll}</span>
