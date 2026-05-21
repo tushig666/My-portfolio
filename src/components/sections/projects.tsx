@@ -1,3 +1,4 @@
+
 "use client"
 
 import React from "react"
@@ -7,46 +8,44 @@ import Image from "next/image"
 
 const projects = [
   {
-    title: "AI Dashboard",
-    category: "Intelligent Systems",
-    image: "https://picsum.photos/seed/p1/800/600",
-    tags: ["Next.js", "OpenAI", "PostgreSQL"],
-    color: "#00DAFF"
+    title: "AetherMotionLab",
+    category: "Motion Design AI",
+    image: "https://picsum.photos/seed/aether/800/600",
+    tags: ["Genkit", "GSAP", "SVG", "AI"],
+    github: "https://github.com/tushig666/AetherMotionLab",
+    link: "https://aether-motion-lab.vercel.app/"
   },
   {
     title: "VisionCraft AI",
-    category: "Neural Visuals",
-    image: "https://picsum.photos/seed/p2/800/600",
-    tags: ["React", "Three.js", "Python"],
-    color: "#33FFCC"
+    category: "AI Development",
+    image: "https://picsum.photos/seed/vision/800/600",
+    tags: ["Vision AI", "React", "Tailwind"],
+    github: "https://github.com/tushig666/VisionCraft-AI",
+    link: "https://vision-craft-ai-neon.vercel.app/"
   },
   {
-    title: "Autonomous News",
-    category: "AI Content",
-    image: "https://picsum.photos/seed/p3/800/600",
-    tags: ["LLM", "Node.js", "TypeScript"],
-    color: "#00DAFF"
+    title: "Mission Control",
+    category: "AI Orchestration",
+    image: "https://picsum.photos/seed/agents/800/600",
+    tags: ["Multi-Agent", "n8n", "Real-time"],
+    github: "https://github.com/tushig666/Multi-Agent",
+    link: "https://multi-agent-kappa.vercel.app/"
   },
   {
-    title: "Cyber Analytics",
-    category: "Data Matrix",
-    image: "https://picsum.photos/seed/p4/800/600",
-    tags: ["GSAP", "Redux", "API"],
-    color: "#33FFCC"
+    title: "Nebula Market",
+    category: "Fintech AI",
+    image: "https://picsum.photos/seed/nebula/800/600",
+    tags: ["Gemini", "Firebase", "Analytics"],
+    github: "https://github.com/tushig666/Nebula-Market",
+    link: "https://nebula-market-chi.vercel.app/"
   },
   {
-    title: "Futuristic SaaS",
-    category: "Enterprise UI",
-    image: "https://picsum.photos/seed/p5/800/600",
-    tags: ["Framer Motion", "Tailwind", "Next.js"],
-    color: "#00DAFF"
-  },
-  {
-    title: "AI Interface",
-    category: "Human-Machine",
-    image: "https://picsum.photos/seed/p6/800/600",
-    tags: ["Next.js", "Voice AI", "Vercel"],
-    color: "#33FFCC"
+    title: "StyleSphere",
+    category: "Design Systems",
+    image: "https://picsum.photos/seed/style/800/600",
+    tags: ["Design AI", "Tokens", "Zustand"],
+    github: "https://github.com/tushig666/StyleSphere",
+    link: "https://style-sphere-azure.vercel.app/"
   }
 ]
 
@@ -103,8 +102,8 @@ export function Projects() {
 
                 {/* Top Actions */}
                 <div className="absolute top-6 right-6 flex gap-3 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all">
-                  <a href="#" className="p-2 rounded-full glass border-white/10 hover:border-primary/50 hover:text-primary transition-colors"><Github size={18} /></a>
-                  <a href="#" className="p-2 rounded-full glass border-white/10 hover:border-primary/50 hover:text-primary transition-colors"><ExternalLink size={18} /></a>
+                  <a href={project.github} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full glass border-white/10 hover:border-primary/50 hover:text-primary transition-colors"><Github size={18} /></a>
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full glass border-white/10 hover:border-primary/50 hover:text-primary transition-colors"><ExternalLink size={18} /></a>
                 </div>
               </div>
             </motion.div>
@@ -117,7 +116,7 @@ export function Projects() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          <a href="#" className="inline-flex items-center gap-3 text-foreground/50 hover:text-primary font-bold tracking-widest text-sm transition-all group">
+          <a href="https://github.com/tushig666" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 text-foreground/50 hover:text-primary font-bold tracking-widest text-sm transition-all group">
             DISCOVER ALL ARCHIVES <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform" />
           </a>
         </motion.div>

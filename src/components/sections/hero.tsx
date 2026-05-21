@@ -1,3 +1,4 @@
+
 "use client"
 
 import React, { useEffect, useRef } from "react"
@@ -100,7 +101,7 @@ export function Hero() {
         transition={{ delay: 1.2 }}
       >
         <div className="w-[1px] h-24 bg-white/10 mx-auto" />
-        <a href="#" className="hover:text-primary transition-all hover:-translate-y-1"><Github size={20} /></a>
+        <a href="https://github.com/tushig666" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-all hover:-translate-y-1"><Github size={20} /></a>
         <a href="#" className="hover:text-primary transition-all hover:-translate-y-1"><Instagram size={20} /></a>
         <a href="#" className="hover:text-primary transition-all hover:-translate-y-1"><Mail size={20} /></a>
       </motion.div>

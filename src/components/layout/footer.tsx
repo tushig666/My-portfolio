@@ -1,8 +1,9 @@
+
 "use client"
 
 import React from "react"
 import { motion } from "framer-motion"
-import { ChevronUp } from "lucide-react"
+import { ChevronUp, Github, Twitter, Linkedin, Instagram } from "lucide-react"
 
 export function Footer() {
   const scrollToTop = () => {
@@ -19,11 +20,10 @@ export function Footer() {
           </div>
 
           <div className="flex gap-8">
-            {['GitHub', 'Twitter', 'LinkedIn', 'Instagram'].map((social) => (
-              <a key={social} href="#" className="text-xs font-bold text-foreground/40 hover:text-primary transition-colors tracking-widest uppercase">
-                {social}
-              </a>
-            ))}
+            <a href="https://github.com/tushig666" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-foreground/40 hover:text-primary transition-colors tracking-widest uppercase">GitHub</a>
+            <a href="#" className="text-xs font-bold text-foreground/40 hover:text-primary transition-colors tracking-widest uppercase">Twitter</a>
+            <a href="#" className="text-xs font-bold text-foreground/40 hover:text-primary transition-colors tracking-widest uppercase">LinkedIn</a>
+            <a href="#" className="text-xs font-bold text-foreground/40 hover:text-primary transition-colors tracking-widest uppercase">Instagram</a>
           </div>
 
           <button 

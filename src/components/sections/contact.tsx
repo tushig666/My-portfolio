@@ -1,3 +1,4 @@
+
 "use client"
 
 import React from "react"
@@ -48,16 +49,29 @@ export function Contact() {
             </div>
 
             <div className="flex gap-4 mt-16">
-              {[<Github />, <Instagram />, <Linkedin />].map((icon, i) => (
-                <motion.a 
-                  key={i}
-                  href="#"
-                  className="w-12 h-12 rounded-full glass flex items-center justify-center border-white/10 hover:border-primary hover:text-primary transition-all shadow-xl"
-                  whileHover={{ y: -5, scale: 1.1 }}
-                >
-                  {icon}
-                </motion.a>
-              ))}
+              <motion.a 
+                href="https://github.com/tushig666"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full glass flex items-center justify-center border-white/10 hover:border-primary hover:text-primary transition-all shadow-xl"
+                whileHover={{ y: -5, scale: 1.1 }}
+              >
+                <Github />
+              </motion.a>
+              <motion.a 
+                href="#"
+                className="w-12 h-12 rounded-full glass flex items-center justify-center border-white/10 hover:border-primary hover:text-primary transition-all shadow-xl"
+                whileHover={{ y: -5, scale: 1.1 }}
+              >
+                <Instagram />
+              </motion.a>
+              <motion.a 
+                href="#"
+                className="w-12 h-12 rounded-full glass flex items-center justify-center border-white/10 hover:border-primary hover:text-primary transition-all shadow-xl"
+                whileHover={{ y: -5, scale: 1.1 }}
+              >
+                <Linkedin />
+              </motion.a>
             </div>
           </motion.div>
 

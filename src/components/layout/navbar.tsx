@@ -1,3 +1,4 @@
+
 "use client"
 
 import React, { useState, useEffect } from "react"
@@ -40,6 +41,7 @@ export function Navbar() {
         <motion.div 
           className="text-2xl font-headline font-bold text-primary flex items-center gap-2 group cursor-pointer"
           whileHover={{ scale: 1.05 }}
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
           <div className="w-8 h-8 rounded border-2 border-primary flex items-center justify-center font-bold text-xs group-hover:bg-primary group-hover:text-background transition-colors">TT</div>
           <span className="hidden sm:inline-block neon-text">NEOPULSE</span>
@@ -61,8 +63,8 @@ export function Navbar() {
 
         <div className="flex items-center gap-4">
           <div className="hidden sm:flex items-center gap-4 border-r border-white/10 pr-4 mr-2">
-            <a href="https://github.com" target="_blank" className="hover:text-primary transition-colors"><Github size={18} /></a>
-            <a href="https://instagram.com" target="_blank" className="hover:text-primary transition-colors"><Instagram size={18} /></a>
+            <a href="https://github.com/tushig666" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors"><Github size={18} /></a>
+            <a href="#" className="hover:text-primary transition-colors"><Instagram size={18} /></a>
           </div>
           <motion.a
             href="#contact"
