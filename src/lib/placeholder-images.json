@@ -29,6 +29,12 @@
       "description": "StyleSphere Design Engine",
       "imageUrl": "https://scontent.ffsz1-2.fna.fbcdn.net/v/t1.15752-9/696528898_26857463067195644_2072187621414442326_n.png?stp=dst-png_s960x960&_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=S3oJCVGjOsYQ7kNvwFuuiS-&_nc_oc=AdrtKpQIj5lWY1cMqrevPUO0Kd4aahsL1_0UumZQm5pEdqlnC8pWanB4rZRbT08oTCY&_nc_zt=23&_nc_ht=scontent.ffsz1-2.fna&_nc_ss=7b6a8&oh=03_Q7cD5QGNCcfRGk0OkQiQrvaQZEi9Vwg5Lu3F_kHHyhps5CcvuA&oe=6A35DA41",
       "imageHint": "design system"
+    },
+    {
+      "id": "profile",
+      "description": "Tushig Tse Profile",
+      "imageUrl": "https://scontent.xx.fbcdn.net/v/t1.15752-9/696009355_1854752561869408_7235278146747468910_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=9f807c&_nc_ohc=FZpqLUOGjOkQ7kNvwFdvb1E&_nc_oc=AdrqP7cYQlnTNIMbR_sNRU1MMtEloJorKoKZbRvdwp5wDtUd36rOdJ5-1BapF8anufgXwcWpE2RfmSSwdFF4Wdch&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD5QGJKdbcM7paOfNtTzL5zO5ZJXlCAJH_Jc28k4y8HkWFPg&oe=6A35D5A4",
+      "imageHint": "profile picture"
     }
   ]
 }

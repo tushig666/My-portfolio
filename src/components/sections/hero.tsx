@@ -1,15 +1,18 @@
-
 "use client"
 
 import React, { useEffect, useRef } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { ArrowRight, Github, Instagram, Mail, ChevronDown } from "lucide-react"
+import Image from "next/image"
+import { PlaceHolderImages } from "@/lib/placeholder-images"
 
 export function Hero() {
   const containerRef = useRef<HTMLDivElement>(null)
   const { scrollY } = useScroll()
   const y1 = useTransform(scrollY, [0, 500], [0, 200])
   const opacity = useTransform(scrollY, [0, 300], [1, 0])
+  
+  const profileImage = PlaceHolderImages.find(img => img.id === 'profile')?.imageUrl || ""
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20" ref={containerRef}>
@@ -41,6 +44,31 @@ export function Hero() {
 
       <div className="container relative z-10 px-6 mx-auto">
         <div className="flex flex-col items-center text-center">
+          
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
+            className="relative w-32 h-32 md:w-40 md:h-40 mb-8 group"
+          >
+            {/* Pulsing Aura */}
+            <div className="absolute inset-[-4px] rounded-full bg-primary/30 blur-md group-hover:bg-primary/50 transition-all animate-pulse" />
+            
+            {/* Outer Ring */}
+            <div className="absolute inset-0 rounded-full border-2 border-primary/50 shadow-[0_0_15px_rgba(0,5,255,0.5)] z-10" />
+            
+            {/* Image Container */}
+            <div className="relative w-full h-full rounded-full overflow-hidden border border-white/10 glass p-1">
+              <Image
+                src={profileImage}
+                alt="Tushig Tse"
+                fill
+                className="object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-700"
+                priority
+              />
+            </div>
+          </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -102,8 +130,7 @@ export function Hero() {
       >
         <div className="w-[1px] h-24 bg-white/10 mx-auto" />
         <a href="https://github.com/tushig666" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-all hover:-translate-y-1"><Github size={20} /></a>
-        <a href="#" className="hover:text-primary transition-all hover:-translate-y-1"><Instagram size={20} /></a>
-        <a href="#" className="hover:text-primary transition-all hover:-translate-y-1"><Mail size={20} /></a>
+        <a href="mailto:tsetushig@gmail.com" className="hover:text-primary transition-all hover:-translate-y-1"><Mail size={20} /></a>
       </motion.div>
 
       {/* Scroll Indicator */}
