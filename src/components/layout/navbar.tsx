@@ -1,4 +1,3 @@
-
 "use client"
 
 import React, { useState, useEffect } from "react"
@@ -44,7 +43,6 @@ export function Navbar() {
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
           <div className="w-8 h-8 rounded border-2 border-primary flex items-center justify-center font-bold text-xs group-hover:bg-primary group-hover:text-background transition-colors">TT</div>
-          <span className="hidden sm:inline-block neon-text">NEOPULSE</span>
         </motion.div>
 
         {/* Desktop Nav */}
@@ -56,7 +54,7 @@ export function Navbar() {
               className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors relative group"
             >
               {item.name}
-              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-primary transition-all group-hover:w-full shadow-[0_0_10px_#00DAFF]" />
+              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-primary transition-all group-hover:w-full shadow-[0_0_10px_#5900FF]" />
             </a>
           ))}
         </nav>
@@ -64,7 +62,7 @@ export function Navbar() {
         <div className="flex items-center gap-4">
           <div className="hidden sm:flex items-center gap-4 border-r border-white/10 pr-4 mr-2">
             <a href="https://github.com/tushig666" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors"><Github size={18} /></a>
-            <a href="#" className="hover:text-primary transition-colors"><Instagram size={18} /></a>
+            <a href="https://www.instagram.com/tse.tushig/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors"><Instagram size={18} /></a>
           </div>
           <motion.a
             href="#contact"

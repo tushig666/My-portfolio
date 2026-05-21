@@ -5,7 +5,7 @@ import { CustomCursor } from '@/components/ui/custom-cursor';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'NeoPulse | Tushig Tse Portfolio',
+  title: 'Tushig Tse Portfolio',
   description: 'Elite Frontend Developer & AI Builder Portfolio',
 };
 
