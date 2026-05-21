@@ -2,30 +2,11 @@
 
 import React, { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Sparkles, BrainCircuit, Loader2, Send, Rocket } from "lucide-react"
-import { generateFuturisticProjectVision, type GenerateFuturisticProjectVisionOutput } from "@/ai/flows/generate-futuristic-project-vision"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
+import { Sparkles, BrainCircuit, Rocket } from "lucide-react"
+import { type GenerateFuturisticProjectVisionOutput } from "@/ai/flows/generate-futuristic-project-vision"
 
 export function AIVision() {
-  const [input, setInput] = useState("")
-  const [loading, setLoading] = useState(false)
-  const [vision, setVision] = useState<GenerateFuturisticProjectVisionOutput | null>(null)
-
-  const handleGenerate = async (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!input.trim() || loading) return
-    
-    setLoading(true)
-    try {
-      const result = await generateFuturisticProjectVision({ projectIdea: input })
-      setVision(result)
-    } catch (error) {
-      console.error("AI Generation failed:", error)
-    } finally {
-      setLoading(false)
-    }
-  }
+  const [vision] = useState<GenerateFuturisticProjectVisionOutput | null>(null)
 
   return (
     <section id="vision" className="py-24 relative overflow-hidden">
@@ -38,31 +19,12 @@ export function AIVision() {
               <BrainCircuit size={14} /> AI_REASONING_ENGINE_v2.5
             </div>
             <h2 className="text-4xl md:text-6xl font-bold font-headline mb-6">
-              LET'S CO-CREATE THE <span className="text-primary neon-text">FUTURE.</span>
+              CO-CREATING THE <span className="text-primary neon-text">FUTURE.</span>
             </h2>
             <p className="text-foreground/60 text-lg">
-              Enter a high-level project idea below, and my custom AI model will architect a cinematic, futuristic vision for it instantly.
+              My custom AI models are designed to architect cinematic, futuristic visions for any complex digital infrastructure instantly.
             </p>
           </div>
-
-          <form onSubmit={handleGenerate} className="relative group mb-12">
-            <div className="absolute inset-0 bg-primary/20 blur-xl opacity-0 group-focus-within:opacity-100 transition-opacity" />
-            <div className="relative flex gap-2">
-              <Input
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                placeholder="Ex: A decentralized VR memory bank..."
-                className="bg-background/80 border-white/10 h-16 px-6 text-lg rounded-xl focus-visible:ring-primary focus-visible:border-primary glass"
-              />
-              <Button 
-                type="submit" 
-                disabled={loading}
-                className="h-16 px-8 rounded-xl bg-primary text-background font-bold hover:brightness-110 neon-glow min-w-[140px]"
-              >
-                {loading ? <Loader2 className="animate-spin" /> : <div className="flex items-center gap-2">INITIALIZE <Send size={18} /></div>}
-              </Button>
-            </div>
-          </form>
 
           <AnimatePresence mode="wait">
             {vision && (
