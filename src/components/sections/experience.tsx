@@ -15,22 +15,22 @@ const timeline = [
   {
     year: "2025 — 2026",
     title: "Advanced Full Stack Evolution",
-    company: "TUSHIG AI SYSTEMS",
-    desc: "Expanded beyond frontend engineering into backend architecture, API systems, databases, and scalable application logic. Discovered that building truly advanced products requires far more than visual design — demanding deep understanding of infrastructure, system thinking, performance, and engineering discipline.",
+    company: "AI SYSTEMS",
+    desc: "Expanded beyond frontend engineering into backend architecture, API systems, databases, and scalable application logic. Discovered that building truly advanced products requires far more than visual design — demanding deep understanding of infrastructure, system thinking, performance, and engineering discipline.\n\nBegan developing increasingly complex applications beyond simple landing pages and e-commerce platforms — experimenting with intelligent systems, interactive AI products, and next-generation web experiences.",
     icon: <Cpu />
   },
   {
     year: "2024 — 2025",
     title: "Frontend Engineering Expansion",
     company: "INTERFACE_RESEARCH_PHASE",
-    desc: "Developed a strong obsession with interface design, interaction systems, and futuristic UI/UX experiences. Started deeply studying modern frontend technologies and industry-standard engineering practices — focusing on creating smooth, visually immersive, and highly interactive user experiences.",
+    desc: "Developed a strong obsession with interface design, interaction systems, and futuristic UI/UX experiences. Started deeply studying modern frontend technologies and industry-standard engineering practices — focusing on creating smooth, visually immersive, and highly interactive user experiences.\n\nExplored animation systems, responsive architecture, motion design, and premium web aesthetics inspired by advanced startup interfaces and cinematic digital products.",
     icon: <Layers />
   },
   {
     year: "2024",
     title: "The Genesis Phase",
     company: "VIBE_CODER_PROTOCOL",
-    desc: "Entered the world of modern web development driven by curiosity, experimentation, and creative ambition. Initially focused on visually exciting frontend concepts and rapidly prototyping ideas — discovering a deep passion for building digital experiences that feel alive, immersive, and futuristic.",
+    desc: "Entered the world of modern web development driven by curiosity, experimentation, and creative ambition. Initially focused on visually exciting frontend concepts and rapidly prototyping ideas — discovering a deep passion for building digital experiences that feel alive, immersive, and futuristic.\n\nThis phase became the foundation for a long-term evolution into advanced frontend engineering, AI-powered systems, and intelligent product development.",
     icon: <Zap />
   }
 ]
@@ -71,7 +71,7 @@ export function Experience() {
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-2">{item.title}</h3>
                     <div className="text-primary font-bold mb-4">{item.company}</div>
-                    <p className="text-foreground/60 leading-relaxed text-sm">{item.desc}</p>
+                    <p className="text-foreground/60 leading-relaxed text-sm whitespace-pre-line">{item.desc}</p>
                   </div>
                 </div>
                 
