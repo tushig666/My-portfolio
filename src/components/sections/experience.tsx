@@ -2,36 +2,36 @@
 
 import React from "react"
 import { motion } from "framer-motion"
-import { Briefcase, GraduationCap, Award } from "lucide-react"
+import { Briefcase, Award, Cpu, Zap, Rocket, Layers } from "lucide-react"
 
 const timeline = [
   {
-    year: "2024 - PRESENT",
-    title: "Senior AI Engineer",
-    company: "Future Lab",
-    desc: "Leading development of generative UI systems and intelligent automation platforms.",
-    icon: <Briefcase />
+    year: "2026 — BEYOND",
+    title: "Autonomous Experience Architect",
+    company: "SYNTHETIC_FRONTIER_DIVISION",
+    desc: "Transforming ambitious concepts into fully operational intelligent systems — blending cinematic frontend engineering, AI orchestration, and immersive digital experiences into a unified futuristic ecosystem. Continuously optimizing development workflows to execute high-level ideas with speed, precision, and scalable architecture.",
+    icon: <Rocket />
   },
   {
-    year: "2022 - 2024",
-    title: "Frontend Architect",
-    company: "NeoTech Inc",
-    desc: "Spearheaded the migration to Next.js 14 and implemented cinema-grade animation standards.",
-    icon: <Briefcase />
+    year: "2025 — 2026",
+    title: "Advanced Full Stack Evolution",
+    company: "TUSHIG AI SYSTEMS",
+    desc: "Expanded beyond frontend engineering into backend architecture, API systems, databases, and scalable application logic. Discovered that building truly advanced products requires far more than visual design — demanding deep understanding of infrastructure, system thinking, performance, and engineering discipline.",
+    icon: <Cpu />
   },
   {
-    year: "2020 - 2022",
-    title: "Interactive Developer",
-    company: "Creative Studio",
-    desc: "Focused on high-end interactive websites and 3D web experiences using Three.js.",
-    icon: <Award />
+    year: "2024 — 2025",
+    title: "Frontend Engineering Expansion",
+    company: "INTERFACE_RESEARCH_PHASE",
+    desc: "Developed a strong obsession with interface design, interaction systems, and futuristic UI/UX experiences. Started deeply studying modern frontend technologies and industry-standard engineering practices — focusing on creating smooth, visually immersive, and highly interactive user experiences.",
+    icon: <Layers />
   },
   {
-    year: "2016 - 2020",
-    title: "Computer Science Degree",
-    company: "Tech University",
-    desc: "Graduated with honors, focusing on software architecture and UI/UX engineering.",
-    icon: <GraduationCap />
+    year: "2024",
+    title: "The Genesis Phase",
+    company: "VIBE_CODER_PROTOCOL",
+    desc: "Entered the world of modern web development driven by curiosity, experimentation, and creative ambition. Initially focused on visually exciting frontend concepts and rapidly prototyping ideas — discovering a deep passion for building digital experiences that feel alive, immersive, and futuristic.",
+    icon: <Zap />
   }
 ]
 
@@ -64,14 +64,14 @@ export function Experience() {
 
                 <div className={`w-full md:w-1/2 ml-16 md:ml-0 ${idx % 2 === 0 ? 'md:pl-16' : 'md:pr-16 md:text-right'}`}>
                   <div className="glass p-6 rounded-2xl border-white/5 hover:border-secondary/30 transition-all">
-                    <div className="flex items-center gap-3 mb-4 md:justify-end lg:justify-start">
+                    <div className={`flex items-center gap-3 mb-4 ${idx % 2 !== 0 ? 'md:justify-end' : 'md:justify-start'}`}>
                       {idx % 2 !== 0 && <span className="text-secondary md:order-last">{item.icon}</span>}
                       {idx % 2 === 0 && <span className="text-secondary">{item.icon}</span>}
                       <span className="text-sm font-bold text-secondary tracking-widest">{item.year}</span>
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-2">{item.title}</h3>
                     <div className="text-primary font-bold mb-4">{item.company}</div>
-                    <p className="text-foreground/60 leading-relaxed">{item.desc}</p>
+                    <p className="text-foreground/60 leading-relaxed text-sm">{item.desc}</p>
                   </div>
                 </div>
                 
