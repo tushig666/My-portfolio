@@ -45,7 +45,7 @@ export function Hero() {
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-                className="text-5xl md:text-8xl lg:text-9xl font-calligraphy leading-tight tracking-normal whitespace-nowrap"
+                className="text-5xl md:text-8xl lg:text-9xl font-headline font-bold leading-tight tracking-tighter whitespace-nowrap"
               >
                 <span className="text-primary neon-text">Tse</span>{" "}
                 <span className="text-white">Tushig</span>
