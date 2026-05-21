@@ -1,4 +1,3 @@
-
 "use client"
 
 import React, { useEffect, useRef } from "react"
@@ -40,16 +39,42 @@ export function Hero() {
               SYSTEM STATUS: ONLINE
             </motion.div>
 
-            <motion.h1
-              style={{ y: y1 }}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-              className="text-5xl md:text-8xl lg:text-9xl font-headline font-bold leading-tight mb-6 tracking-tighter whitespace-nowrap"
-            >
-              <span className="text-primary neon-text">TSE</span>{" "}
-              <span className="text-white">TUSHIG</span>
-            </motion.h1>
+            <div className="flex flex-col lg:flex-row items-center gap-8 mb-6">
+              <motion.h1
+                style={{ y: y1 }}
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+                className="text-5xl md:text-8xl lg:text-9xl font-calligraphy leading-tight tracking-normal whitespace-nowrap"
+              >
+                <span className="text-primary neon-text">Tse</span>{" "}
+                <span className="text-white">Tushig</span>
+              </motion.h1>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5, x: 50 }}
+                animate={{ opacity: 1, scale: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+                className="relative w-24 h-24 md:w-32 md:h-32 group flex-shrink-0"
+              >
+                {/* Pulsing Aura */}
+                <div className="absolute inset-[-6px] rounded-full bg-primary/30 blur-md group-hover:bg-primary/50 transition-all animate-pulse" />
+                
+                {/* Outer Ring */}
+                <div className="absolute inset-0 rounded-full border-2 border-primary/50 shadow-[0_0_20px_rgba(0,5,255,0.5)] z-10" />
+                
+                {/* Image Container */}
+                <div className="relative w-full h-full rounded-full overflow-hidden border border-white/10 glass p-1.5">
+                  <Image
+                    src={profileImage}
+                    alt="Tushig Tse"
+                    fill
+                    className="object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-700"
+                    priority
+                  />
+                </div>
+              </motion.div>
+            </div>
 
             <motion.p
               initial={{ opacity: 0 }}
@@ -78,31 +103,6 @@ export function Hero() {
               </a>
             </motion.div>
           </div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.5, x: 50 }}
-            animate={{ opacity: 1, scale: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            className="relative w-28 h-28 md:w-40 md:h-40 lg:w-48 lg:h-48 group flex-shrink-0"
-          >
-            {/* Pulsing Aura */}
-            <div className="absolute inset-[-6px] rounded-full bg-primary/30 blur-md group-hover:bg-primary/50 transition-all animate-pulse" />
-            
-            {/* Outer Ring */}
-            <div className="absolute inset-0 rounded-full border-2 border-primary/50 shadow-[0_0_20px_rgba(0,5,255,0.5)] z-10" />
-            
-            {/* Image Container */}
-            <div className="relative w-full h-full rounded-full overflow-hidden border border-white/10 glass p-1.5">
-              <Image
-                src={profileImage}
-                alt="Tushig Tse"
-                fill
-                className="object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-700"
-                priority
-              />
-            </div>
-          </motion.div>
-
         </div>
       </div>
 
