@@ -1,3 +1,4 @@
+
 "use client"
 
 import React from "react"
@@ -16,8 +17,9 @@ export function AIVision() {
             viewport={{ once: true }}
             transition={{ duration: 1, ease: "easeOut" }}
           >
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold font-headline leading-[1.1] tracking-tighter">
-              Creating interfaces that do more than <span className="text-primary neon-text italic">function</span> — experiences that move, react, evolve, and <span className="text-secondary neon-text">feel alive.</span>
+            <div className="text-primary font-bold tracking-[0.3em] text-sm mb-8 uppercase">VISION</div>
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold font-headline leading-[1.1] tracking-tighter text-white">
+              Creating <span className="text-primary neon-text">interfaces</span> that do more than <span className="text-primary neon-text italic">function</span> — experiences that move, react, evolve, and <span className="text-primary neon-text">feel alive.</span>
             </h2>
           </motion.div>
         </div>
