@@ -9,7 +9,6 @@ import { Projects } from "@/components/sections/projects"
 import { Experience } from "@/components/sections/experience"
 import { AIVision } from "@/components/sections/ai-vision"
 import { Contact } from "@/components/sections/contact"
-import { Footer } from "@/components/layout/footer"
 
 export default function Home() {
   return (
@@ -23,7 +22,6 @@ export default function Home() {
         <Experience />
         <AIVision />
         <Contact />
-        <Footer />
       </div>
 
       {/* Persistent global background noise/texture */}
