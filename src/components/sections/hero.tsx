@@ -47,7 +47,7 @@ export function Hero() {
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-                className="text-5xl md:text-8xl lg:text-9xl font-headline font-bold leading-tight tracking-tighter whitespace-nowrap"
+                className="text-5xl md:text-8xl lg:text-9xl font-headline font-bold leading-tight tracking-tighter whitespace-nowrap uppercase"
               >
                 <span className="text-primary neon-text">TSE</span>{" "}
                 <span className="text-white">TUSHIG</span>
@@ -57,7 +57,7 @@ export function Hero() {
                 initial={{ opacity: 0, scale: 0.5, x: 50 }}
                 animate={{ opacity: 1, scale: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-                className="relative w-16 h-16 md:w-20 md:h-20 group flex-shrink-0"
+                className="relative w-14 h-14 md:w-16 md:h-16 group flex-shrink-0"
               >
                 <div className="absolute inset-[-6px] rounded-full bg-primary/30 blur-md group-hover:bg-primary/50 transition-all animate-pulse" />
                 <div className="absolute inset-0 rounded-full border-2 border-primary/50 shadow-[0_0_20px_rgba(0,5,255,0.5)] z-10" />
@@ -118,7 +118,7 @@ export function Hero() {
         style={{ opacity }}
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 text-foreground/60 cursor-pointer z-20 group"
+        className="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 text-foreground/60 cursor-pointer z-20 group"
         onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
       >
         <span className="text-[10px] tracking-[0.4em] font-bold uppercase transition-colors group-hover:text-primary">{t.hero.scroll}</span>
