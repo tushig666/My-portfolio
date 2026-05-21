@@ -10,7 +10,7 @@ import { PlaceHolderImages } from "@/lib/placeholder-images"
 export function Hero() {
   const containerRef = useRef<HTMLDivElement>(null)
   const { scrollY } = useScroll()
-  const y1 = useTransform(scrollY, [0, 500], [0, 200])
+  const y1 = useTransform(scrollY, [0, 500], [0, 150])
   const opacity = useTransform(scrollY, [0, 300], [1, 0])
   
   const profileImage = PlaceHolderImages.find(img => img.id === 'profile')?.imageUrl || ""
@@ -19,32 +19,12 @@ export function Hero() {
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20" ref={containerRef}>
       {/* Background Particles/Grid */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,218,255,0.1),transparent_70%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,5,255,0.05),transparent_70%)]" />
         <div className="absolute inset-0 cyber-grid [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_90%)] opacity-30" />
-        
-        {/* Animated Orbs */}
-        <motion.div 
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 blur-[120px] rounded-full"
-          animate={{ 
-            x: [0, 100, 0], 
-            y: [0, 50, 0],
-            scale: [1, 1.2, 1]
-          }}
-          transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div 
-          className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-secondary/10 blur-[150px] rounded-full"
-          animate={{ 
-            x: [0, -150, 0], 
-            y: [0, -100, 0],
-            scale: [1, 1.3, 1]
-          }}
-          transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
-        />
       </div>
 
       <div className="container relative z-10 px-6 mx-auto">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:text-left text-center">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 text-center lg:text-left">
           
           <div className="flex-1">
             <motion.div
@@ -65,7 +45,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-              className="text-7xl md:text-[10rem] lg:text-[12rem] font-headline font-bold leading-[0.9] mb-6 tracking-tighter"
+              className="text-6xl md:text-[8rem] lg:text-[10rem] font-headline font-bold leading-[0.9] mb-6 tracking-tighter"
             >
               <span className="text-primary neon-text">TSE</span><br />
               <span className="text-white">TUSHIG</span>
@@ -75,7 +55,7 @@ export function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.5 }}
-              className="text-xl md:text-3xl lg:text-4xl text-foreground/60 max-w-2xl font-medium tracking-wide mb-12 font-headline"
+              className="text-lg md:text-xl lg:text-2xl text-foreground/60 max-w-2xl font-medium tracking-wide mb-12 font-headline"
             >
               FRONTEND ARCHITECT & <span className="text-secondary">AI BUILDER</span>
             </motion.p>
@@ -84,7 +64,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
-              className="flex flex-wrap lg:justify-start justify-center gap-6"
+              className="flex flex-wrap justify-center lg:justify-start gap-6"
             >
               <a href="#projects" className="group relative px-8 py-4 bg-primary text-background font-bold rounded-lg overflow-hidden transition-all hover:scale-105 active:scale-95 neon-glow">
                 <span className="relative z-10 flex items-center gap-2">
