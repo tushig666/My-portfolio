@@ -1,3 +1,40 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "p1",
+      "description": "AI Dashboard interface",
+      "imageUrl": "https://picsum.photos/seed/p1/800/600",
+      "imageHint": "futuristic dashboard"
+    },
+    {
+      "id": "p2",
+      "description": "VisionCraft AI interface",
+      "imageUrl": "https://picsum.photos/seed/p2/800/600",
+      "imageHint": "neural visual"
+    },
+    {
+      "id": "p3",
+      "description": "Autonomous News generator",
+      "imageUrl": "https://picsum.photos/seed/p3/800/600",
+      "imageHint": "ai content"
+    },
+    {
+      "id": "p4",
+      "description": "Cyber Analytics platform",
+      "imageUrl": "https://picsum.photos/seed/p4/800/600",
+      "imageHint": "data matrix"
+    },
+    {
+      "id": "p5",
+      "description": "SaaS Landing page",
+      "imageUrl": "https://picsum.photos/seed/p5/800/600",
+      "imageHint": "enterprise ui"
+    },
+    {
+      "id": "p6",
+      "description": "AI Interface system",
+      "imageUrl": "https://picsum.photos/seed/p6/800/600",
+      "imageHint": "human machine"
+    }
+  ]
 }
