@@ -1,3 +1,4 @@
+
 "use client"
 
 import React, { useEffect, useRef } from "react"
@@ -47,8 +48,8 @@ export function Hero() {
                 transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
                 className="text-5xl md:text-8xl lg:text-9xl font-headline font-bold leading-tight tracking-tighter whitespace-nowrap"
               >
-                <span className="text-primary neon-text">Tse</span>{" "}
-                <span className="text-white">Tushig</span>
+                <span className="text-primary neon-text">TSE</span>{" "}
+                <span className="text-white">TUSHIG</span>
               </motion.h1>
 
               <motion.div
