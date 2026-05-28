@@ -1,3 +1,4 @@
+
 "use client"
 
 import React from "react"
@@ -12,8 +13,8 @@ const projectsData = (t: any) => [
     category: t.language === 'ja' ? "オーディオUI AI" : "Audio-to-UI AI",
     image: "https://scontent.xx.fbcdn.net/v/t1.15752-9/707207538_979777531584763_6177291930601758096_n.png?stp=dst-png_s960x960&_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_ohc=AhZ3dRW2vacQ7kNvwHe6gfh&_nc_oc=Adpg_yl_zvibQPDupBeCe_VXUtkjbNlbbYfopiHeNIKskqliv3qyU3k6YRMAsYdZ6Ppywxan9aXswxI-mq22h5wi&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD5QGRWA0fxmxrWlMhipEU82EZh_acUjJpFzm40ak1tZDTjg&oe=6A3F5901",
     tags: ["Neural AI", "R3F", "Audio Engine", "Gemini"],
-    github: "https://github.com/tushig666",
-    link: "#"
+    github: "https://github.com/tushig666/SynesthesiaOS",
+    link: "https://synesthesia-os.vercel.app/"
   },
   {
     title: "AetherMotionLab",
