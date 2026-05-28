@@ -1,6 +1,12 @@
 {
   "placeholderImages": [
     {
+      "id": "synesthesia",
+      "description": "Synesthesia OS Neural Interface",
+      "imageUrl": "https://scontent.xx.fbcdn.net/v/t1.15752-9/707207538_979777531584763_6177291930601758096_n.png?stp=dst-png_s960x960&_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_ohc=AhZ3dRW2vacQ7kNvwHe6gfh&_nc_oc=Adpg_yl_zvibQPDupBeCe_VXUtkjbNlbbYfopiHeNIKskqliv3qyU3k6YRMAsYdZ6Ppywxan9aXswxI-mq22h5wi&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD5QGRWA0fxmxrWlMhipEU82EZh_acUjJpFzm40ak1tZDTjg&oe=6A3F5901",
+      "imageHint": "neural interface"
+    },
+    {
       "id": "aether",
       "description": "AetherMotionLab Interface",
       "imageUrl": "https://scontent.ffsz1-2.fna.fbcdn.net/v/t1.15752-9/695937949_1002368386057583_6288348065998332572_n.png?stp=dst-png_s960x960&_nc_cat=109&ccb=1-7&_nc_sid=9f807c&_nc_ohc=Qe1XWAyHxe0Q7kNvwFu7bBJ&_nc_oc=AdoiZ5Dqgz7jixKE2YOJ75w2_HQYks7yFYJYaVD93YsfcNXs0zFWIhYCmOgYg4Btj6M&_nc_zt=23&_nc_ht=scontent.ffsz1-2.fna&_nc_ss=7b6a8&oh=03_Q7cD5QEJ5Okxxyth39VxUgXLbGFK6VnoJgizZwLa3_gGOPhT7g&oe=6A35B07D",

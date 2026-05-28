@@ -8,8 +8,16 @@ import { useLanguage } from "@/components/providers/language-provider"
 
 const projectsData = (t: any) => [
   {
+    title: "Synesthesia OS",
+    category: t.language === 'ja' ? "オーディオUI AI" : "Audio-to-UI AI",
+    image: "https://scontent.xx.fbcdn.net/v/t1.15752-9/707207538_979777531584763_6177291930601758096_n.png?stp=dst-png_s960x960&_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_ohc=AhZ3dRW2vacQ7kNvwHe6gfh&_nc_oc=Adpg_yl_zvibQPDupBeCe_VXUtkjbNlbbYfopiHeNIKskqliv3qyU3k6YRMAsYdZ6Ppywxan9aXswxI-mq22h5wi&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD5QGRWA0fxmxrWlMhipEU82EZh_acUjJpFzm40ak1tZDTjg&oe=6A3F5901",
+    tags: ["Neural AI", "R3F", "Audio Engine", "Gemini"],
+    github: "https://github.com/tushig666",
+    link: "#"
+  },
+  {
     title: "AetherMotionLab",
-    category: t.ja ? "モーションデザインAI" : "Motion Design AI",
+    category: t.language === 'ja' ? "モーションデザインAI" : "Motion Design AI",
     image: "https://scontent.ffsz1-2.fna.fbcdn.net/v/t1.15752-9/695937949_1002368386057583_6288348065998332572_n.png?stp=dst-png_s960x960&_nc_cat=109&ccb=1-7&_nc_sid=9f807c&_nc_ohc=Qe1XWAyHxe0Q7kNvwFu7bBJ&_nc_oc=AdoiZ5Dqgz7jixKE2YOJ75w2_HQYks7yFYJYaVD93YsfcNXs0zFWIhYCmOgYg4Btj6M&_nc_zt=23&_nc_ht=scontent.ffsz1-2.fna&_nc_ss=7b6a8&oh=03_Q7cD5QEJ5Okxxyth39VxUgXLbGFK6VnoJgizZwLa3_gGOPhT7g&oe=6A35B07D",
     tags: ["Genkit", "GSAP", "SVG", "AI"],
     github: "https://github.com/tushig666/AetherMotionLab",
@@ -17,7 +25,7 @@ const projectsData = (t: any) => [
   },
   {
     title: "VisionCraft AI",
-    category: t.ja ? "AI開発" : "AI Development",
+    category: t.language === 'ja' ? "AI開発" : "AI Development",
     image: "https://scontent.ffsz1-2.fna.fbcdn.net/v/t1.15752-9/696427566_967571315894949_1277738291182965691_n.png?stp=dst-png_s960x960&_nc_cat=103&ccb=1-7&_nc_sid=9f807c&_nc_ohc=kvStiqg-S7gQ7kNvwHLxuBy&_nc_oc=AdpET2HlurraIVKB6LF8GkWVanAlPU7jhWY0jdaejd0Ey_dPEV3KxXDSLnQaYDygoq4&_nc_zt=23&_nc_ht=scontent.ffsz1-2.fna&_nc_ss=7b6a8&oh=03_Q7cD5QF0aISTesjwr2FBhEejXeLdVWNHWLVqtGppg85YUyZaJA&oe=6A35B8A4",
     tags: ["Vision AI", "React", "Tailwind"],
     github: "https://github.com/tushig666/VisionCraft-AI",
@@ -25,7 +33,7 @@ const projectsData = (t: any) => [
   },
   {
     title: "Mission Control",
-    category: t.ja ? "AIオーケストレーション" : "AI Orchestration",
+    category: t.language === 'ja' ? "AIオーケストレーション" : "AI Orchestration",
     image: "https://scontent.ffsz1-2.fna.fbcdn.net/v/t1.15752-9/679163846_2069814747218237_7517199737521831349_n.png?stp=dst-png_s960x960&_nc_cat=104&ccb=1-7&_nc_sid=9f807c&_nc_ohc=OCVWUWmUpUwQ7kNvwFujoe0&_nc_oc=Adrl-xizFcWfsSBSuQ6oA9r3oN3F8nPQ0TkE4AQyqUzxGu5FB2HKzn5k81QSwTlMhb0&_nc_zt=23&_nc_ht=scontent.ffsz1-2.fna&_nc_ss=7b6a8&oh=03_Q7cD5QHRNyyqbVZdY_yfRAs8P4PfbQAGwj_et1Sr89AsjVHFVg&oe=6A35CD5F",
     tags: ["Multi-Agent", "n8n", "Real-time"],
     github: "https://github.com/tushig666/Multi-Agent",
@@ -33,7 +41,7 @@ const projectsData = (t: any) => [
   },
   {
     title: "Nebula Market",
-    category: t.ja ? "フィンテックAI" : "Fintech AI",
+    category: t.language === 'ja' ? "フィンテックAI" : "Fintech AI",
     image: "https://scontent.ffsz1-2.fna.fbcdn.net/v/t1.15752-9/696552885_1449551996946805_1611283742831038023_n.png?stp=dst-png_s960x960&_nc_cat=102&ccb=1-7&_nc_sid=9f807c&_nc_ohc=KNyCvPkI020Q7kNvwF2c0r3&_nc_oc=AdqRWJjDL9gn0TWpI5_tvbOdhL8f_7U7iJKs0sueXcI6j3PZIGbk5lS29c0h0NPpgcc&_nc_zt=23&_nc_ht=scontent.ffsz1-2.fna&_nc_ss=7b6a8&oh=03_Q7cD5QG4khM8DIdKhNjCy0ErM7hWX9EW3U4dkM2KSk12b4BqoA&oe=6A35D570",
     tags: ["Gemini", "Firebase", "Analytics"],
     github: "https://github.com/tushig666/Nebula-Market",
@@ -41,7 +49,7 @@ const projectsData = (t: any) => [
   },
   {
     title: "StyleSphere",
-    category: t.ja ? "デザインシステム" : "Design Systems",
+    category: t.language === 'ja' ? "デザインシステム" : "Design Systems",
     image: "https://scontent.ffsz1-2.fna.fbcdn.net/v/t1.15752-9/696528898_26857463067195644_2072187621414442326_n.png?stp=dst-png_s960x960&_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=S3oJCVGjOsYQ7kNvwFuuiS-&_nc_oc=AdrtKpQIj5lWY1cMqrevPUO0Kd4aahsL1_0UumZQm5pEdqlnC8pWanB4rZRbT08oTCY&_nc_zt=23&_nc_ht=scontent.ffsz1-2.fna&_nc_ss=7b6a8&oh=03_Q7cD5QGNCcfRGk0OkQiQrvaQZEi9Vwg5Lu3F_kHHyhps5CcvuA&oe=6A35DA41",
     tags: ["Design AI", "Tokens", "Zustand"],
     github: "https://github.com/tushig666/StyleSphere",
