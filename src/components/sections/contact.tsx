@@ -24,7 +24,7 @@ const contacts = [
 ]
 
 export function Contact() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
 
   return (
     <section id="contact" className="py-24 relative overflow-hidden">
@@ -32,7 +32,7 @@ export function Contact() {
         <div className="text-center mb-16">
           <div className="text-primary font-bold tracking-widest text-sm mb-4 uppercase">{t.contact.sub}</div>
           <h2 className="text-4xl md:text-7xl font-bold font-headline">
-            {t.language === 'en' ? (
+            {language === 'en' ? (
               <>GET IN <span className="text-primary neon-text">TOUCH.</span></>
             ) : (
               <><span className="text-primary neon-text">お問い合わせ。</span></>
