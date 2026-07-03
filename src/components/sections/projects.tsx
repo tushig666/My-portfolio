@@ -42,6 +42,22 @@ const projectsData = (t: any, language: string) => [
     link: "https://aether-motion-lab.vercel.app/"
   },
   {
+    title: "Nebula Market",
+    category: language === 'ja' ? "フィンテック分析" : "Fintech Analytics",
+    image: PlaceHolderImages.find(img => img.id === 'nebula')?.imageUrl || "",
+    tags: ["Next.js", "Recharts", "Fintech"],
+    github: "https://github.com/tushig666/Nebula-Market",
+    link: "https://nebula-market.vercel.app/"
+  },
+  {
+    title: "StyleSphere",
+    category: language === 'ja' ? "デザインシステム" : "Design System",
+    image: PlaceHolderImages.find(img => img.id === 'style')?.imageUrl || "",
+    tags: ["Tailwind", "Radix", "Design"],
+    github: "https://github.com/tushig666/StyleSphere",
+    link: "https://style-sphere.vercel.app/"
+  },
+  {
     title: "VisionCraft AI",
     category: language === 'ja' ? "AI開発" : "AI Development",
     image: PlaceHolderImages.find(img => img.id === 'vision')?.imageUrl || "",
