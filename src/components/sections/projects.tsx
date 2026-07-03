@@ -10,12 +10,12 @@ import { PlaceHolderImages } from "@/lib/placeholder-images"
 
 const projectsData = (t: any, language: string) => [
   {
-    title: "Synesthesia OS",
-    category: language === 'ja' ? "オーディオUI AI" : "Audio-to-UI AI",
-    image: PlaceHolderImages.find(img => img.id === 'synesthesia')?.imageUrl || "",
-    tags: ["Neural AI", "R3F", "Audio Engine", "Genkit"],
-    github: "https://github.com/tushig666/SynesthesiaOS",
-    link: "https://synesthesia-os.vercel.app/"
+    title: "Redroom : The Last Exit",
+    category: language === 'ja' ? "インタラクティブ・スリラー" : "Interactive Thriller",
+    image: PlaceHolderImages.find(img => img.id === 'redroom')?.imageUrl || "",
+    tags: ["Next.js", "Cinematic", "Mystery"],
+    github: "https://github.com/tushig666/redroom",
+    link: "https://redroom-two.vercel.app/"
   },
   {
     title: "Zombie Corridor",
@@ -26,12 +26,12 @@ const projectsData = (t: any, language: string) => [
     link: "https://zombie-corridor-v1.vercel.app/"
   },
   {
-    title: "Redroom : The Last Exit",
-    category: language === 'ja' ? "インタラクティブ・スリラー" : "Interactive Thriller",
-    image: PlaceHolderImages.find(img => img.id === 'redroom')?.imageUrl || "",
-    tags: ["Next.js", "Cinematic", "Mystery"],
-    github: "https://github.com/tushig666/redroom",
-    link: "https://redroom-two.vercel.app/"
+    title: "Synesthesia OS",
+    category: language === 'ja' ? "オーディオUI AI" : "Audio-to-UI AI",
+    image: PlaceHolderImages.find(img => img.id === 'synesthesia')?.imageUrl || "",
+    tags: ["Neural AI", "R3F", "Audio Engine", "Genkit"],
+    github: "https://github.com/tushig666/SynesthesiaOS",
+    link: "https://synesthesia-os.vercel.app/"
   },
   {
     title: "AetherMotionLab",
