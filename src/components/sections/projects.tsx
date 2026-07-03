@@ -1,3 +1,4 @@
+
 "use client"
 
 import React from "react"
@@ -12,7 +13,7 @@ const projectsData = (t: any, language: string) => [
     title: "Synesthesia OS",
     category: language === 'ja' ? "オーディオUI AI" : "Audio-to-UI AI",
     image: PlaceHolderImages.find(img => img.id === 'synesthesia')?.imageUrl || "",
-    tags: ["Neural AI", "R3F", "Audio Engine", "Gemini"],
+    tags: ["Neural AI", "R3F", "Audio Engine", "Genkit"],
     github: "https://github.com/tushig666/SynesthesiaOS",
     link: "https://synesthesia-os.vercel.app/"
   },
@@ -25,7 +26,7 @@ const projectsData = (t: any, language: string) => [
     link: "https://zombie-corridor-v1.vercel.app/"
   },
   {
-    title: "Redroom : Last Exit",
+    title: "Redroom : The Last Exit",
     category: language === 'ja' ? "インタラクティブ・スリラー" : "Interactive Thriller",
     image: PlaceHolderImages.find(img => img.id === 'redroom')?.imageUrl || "",
     tags: ["Next.js", "Cinematic", "Mystery"],
