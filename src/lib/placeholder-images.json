@@ -3,56 +3,56 @@
     {
       "id": "synesthesia",
       "description": "Synesthesia OS Neural Interface",
-      "imageUrl": "https://scontent.xx.fbcdn.net/v/t1.15752-9/707207538_979777531584763_6177291930601758096_n.png?stp=dst-png_s960x960&_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_ohc=AhZ3dRW2vacQ7kNvwHe6gfh&_nc_oc=Adpg_yl_zvibQPDupBeCe_VXUtkjbNlbbYfopiHeNIKskqliv3qyU3k6YRMAsYdZ6Ppywxan9aXswxI-mq22h5wi&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD5QGRWA0fxmxrWlMhipEU82EZh_acUjJpFzm40ak1tZDTjg&oe=6A3F5901",
+      "imageUrl": "/Synesthesia OS thumbnail.png",
       "imageHint": "neural interface"
     },
     {
       "id": "zombie",
       "description": "Zombie Corridor Survival Horror",
-      "imageUrl": "https://scontent.ffsz1-1.fna.fbcdn.net/v/t1.15752-9/736349019_1980398092661323_6912195549910918838_n.png?stp=dst-png_s960x960&_nc_cat=105&ccb=1-7&_nc_sid=9f807c&_nc_ohc=VYJRxMYcH7oQ7kNvwFCijqJ&_nc_oc=AdrircMk6GCqvZG4tDZ1EIpzNCAE-vR0IJgDk5FGBt6y6MfW5t67v2h6zDrQPVooPF0&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.ffsz1-1.fna&_nc_ss=7a22e&oh=03_Q7cD5wGbhQiLdQUrFmT-ynXLXBBYCnZNyXDwRwFgFlazH9hffw&oe=6A6E9571",
+      "imageUrl": "/Zombie corridor thumbnail.png",
       "imageHint": "horror environment"
     },
     {
       "id": "redroom",
       "description": "Redroom: The Last Exit",
-      "imageUrl": "https://scontent.ffsz1-1.fna.fbcdn.net/v/t1.15752-9/735636476_2282010592608066_6636847439866002992_n.png?stp=dst-png_s960x960&_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=iH6MOuJbzOcQ7kNvwEjSaqj&_nc_oc=AdpWurBhCJ6oesdx99627nyWEQPRQwkK45B24WOPfjjcFXTqeVyb-vk1WkI5GBY7krc&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.ffsz1-1.fna&_nc_ss=7a22e&oh=03_Q7cD5wEv4bEeVXRSWilYSt-PO735je4kWbop6q_Dos4wNYjeOw&oe=6A6EC696",
+      "imageUrl": "/REDROOM THUMBNAIL.png",
       "imageHint": "cinematic thriller"
     },
     {
       "id": "aether",
       "description": "AetherMotionLab Interface",
-      "imageUrl": "https://scontent.ffsz1-2.fna.fbcdn.net/v/t1.15752-9/695937949_1002368386057583_6288348065998332572_n.png?stp=dst-png_s960x960&_nc_cat=109&ccb=1-7&_nc_sid=9f807c&_nc_ohc=Qe1XWAyHxe0Q7kNvwFu7bBJ&_nc_oc=AdoiZ5Dqgz7jixKE2YOJ75w2_HQYks7yFYJYaVD93YsfcNXs0zFWIhYCmOgYg4Btj6M&_nc_zt=23&_nc_ht=scontent.ffsz1-2.fna&_nc_ss=7b6a8&oh=03_Q7cD5QEJ5Okxxyth39VxUgXLbGFK6VnoJgizZwLa3_gGOPhT7g&oe=6A35B07D",
+      "imageUrl": "/AetherMotion thumbnail.png",
       "imageHint": "motion graphics"
     },
     {
       "id": "vision",
       "description": "VisionCraft AI interface",
-      "imageUrl": "https://scontent.ffsz1-2.fna.fbcdn.net/v/t1.15752-9/696427566_967571315894949_1277738291182965691_n.png?stp=dst-png_s960x960&_nc_cat=103&ccb=1-7&_nc_sid=9f807c&_nc_ohc=kvStiqg-S7gQ7kNvwHLxuBy&_nc_oc=AdpET2HlurraIVKB6LF8GkWVanAlPU7jhWY0jdaejd0Ey_dPEV3KxXDSLnQaYDygoq4&_nc_zt=23&_nc_ht=scontent.ffsz1-2.fna&_nc_ss=7b6a8&oh=03_Q7cD5QF0aISTesjwr2FBhEejXeLdVWNHWLVqtGppg85YUyZaJA&oe=6A35B8A4",
+      "imageUrl": "/visioncraft ai thumbnail.png",
       "imageHint": "vision ai"
     },
     {
       "id": "agents",
       "description": "Multi-Agent mission control",
-      "imageUrl": "https://scontent.ffsz1-2.fna.fbcdn.net/v/t1.15752-9/679163846_2069814747218237_7517199737521831349_n.png?stp=dst-png_s960x960&_nc_cat=104&ccb=1-7&_nc_sid=9f807c&_nc_ohc=OCVWUWmUpUwQ7kNvwFujoe0&_nc_oc=Adrl-xizFcWfsSBSuQ6oA9r3oN3F8nPQ0TkE4AQyqUzxGu5FB2HKzn5k81QSwTlMhb0&_nc_zt=23&_nc_ht=scontent.ffsz1-2.fna&_nc_ss=7b6a8&oh=03_Q7cD5QHRNyyqbVZdY_yfRAs8P4PfbQAGwj_et1Sr89AsjVHFVg&oe=6A35CD5F",
+      "imageUrl": "/Multi agent AI thumbnail.png",
       "imageHint": "agent orchestration"
     },
     {
       "id": "nebula",
       "description": "Nebula Market dashboard",
-      "imageUrl": "https://scontent.ffsz1-2.fna.fbcdn.net/v/t1.15752-9/696552885_1449551996946805_1611283742831038023_n.png?stp=dst-png_s960x960&_nc_cat=102&ccb=1-7&_nc_sid=9f807c&_nc_ohc=KNyCvPkI020Q7kNvwF2c0r3&_nc_oc=AdqRWJjDL9gn0TWpI5_tvbOdhL8f_7U7iJKs0sueXcI6j3PZIGbk5lS29c0h0NPpgcc&_nc_zt=23&_nc_ht=scontent.ffsz1-2.fna&_nc_ss=7b6a8&oh=03_Q7cD5QG4khM8DIdKhNjCy0ErM7hWX9EW3U4dkM2KSk12b4BqoA&oe=6A35D570",
+      "imageUrl": "/Nebula thumbnail.png",
       "imageHint": "fintech analytics"
     },
     {
       "id": "style",
       "description": "StyleSphere Design Engine",
-      "imageUrl": "https://scontent.ffsz1-2.fna.fbcdn.net/v/t1.15752-9/696528898_26857463067195644_2072187621414442326_n.png?stp=dst-png_s960x960&_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=S3oJCVGjOsYQ7kNvwFuuiS-&_nc_oc=AdrtKpQIj5lWY1cMqrevPUO0Kd4aahsL1_0UumZQm5pEdqlnC8pWanB4rZRbT08oTCY&_nc_zt=23&_nc_ht=scontent.ffsz1-2.fna&_nc_ss=7b6a8&oh=03_Q7cD5QGNCcfRGk0OkQiQrvaQZEi9Vwg5Lu3F_kHHyhps5CcvuA&oe=6A35DA41",
+      "imageUrl": "/Stylesphere thumbnail.png",
       "imageHint": "design system"
     },
     {
-      "id": "profile",
-      "description": "Tushig Tse Profile",
-      "imageUrl": "https://scontent.xx.fbcdn.net/v/t1.15752-9/696009355_1854752561869408_7235278146747468910_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=9f807c&_nc_ohc=FZpqLUOGjOkQ7kNvwFdvb1E&_nc_oc=AdrqP7cYQlnTNIMbR_sNRU1MMtEloJorKoKZbRvdwp5wDtUd36rOdJ5-1BapF8anufgXwcWpE2RfmSSwdFF4Wdch&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD5QGJKdbcM7paOfNtTzL5zO5ZJXlCAJH_Jc28k4y8HkWFPg&oe=6A35D5A4",
-      "imageHint": "profile picture"
-    }
+  "id": "profile",
+  "description": "Tushig Tse Profile",
+  "imageUrl": "/profile.jpg",
+  "imageHint": "profile picture"
+}
   ]
 }
